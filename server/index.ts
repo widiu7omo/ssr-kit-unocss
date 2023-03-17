@@ -4,6 +4,8 @@ import express from "express";
 import compression from "compression";
 import { renderPage } from "vite-plugin-ssr";
 import { root } from "./root.js";
+import { postRouter } from "./routes/posts.js";
+import { userRouter } from "./routes/users.js";
 const isProduction = process.env.NODE_ENV === "production";
 
 startServer();
@@ -26,7 +28,12 @@ async function startServer() {
     ).middlewares;
     app.use(viteDevMiddleware);
   }
-
+  app.use(express.text());
+  app.route("/api").get((req, res, next) => {
+    res.json({ success: true }).status(200);
+  });
+  app.use("/api/posts", postRouter);
+  app.use("/api/users", userRouter);
   app.get("*", async (req, res, next) => {
     const pageContextInit = {
       urlOriginal: req.originalUrl,
@@ -40,7 +47,6 @@ async function startServer() {
     res.status(statusCode).type(contentType);
     httpResponse.pipe(res);
   });
-
   const port = process.env.PORT || 3000;
   app.listen(port);
   console.log(`Server running at http://localhost:${port}`);
