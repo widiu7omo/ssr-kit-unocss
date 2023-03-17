@@ -1,26 +1,29 @@
-import ReactDOMServer from 'react-dom/server'
-import React from 'react'
-import { PageShell } from './PageShell'
-import { escapeInject, dangerouslySkipEscape } from 'vite-plugin-ssr'
-import logoUrl from './logo.svg'
-import type { PageContextServer } from './types'
+import { renderToStream } from "react-streaming/server";
+import React from "react";
+import { PageShell } from "./PageShell";
+import { escapeInject, dangerouslySkipEscape } from "vite-plugin-ssr";
+import logoUrl from "./logo.svg";
+import type { PageContextServer } from "./types";
 
-export { render }
+export { render };
 // See https://vite-plugin-ssr.com/data-fetching
-export const passToClient = ['pageProps', 'urlPathname']
+export const passToClient = ["pageProps", "documentProps"];
 
 async function render(pageContext: PageContextServer) {
-  const { Page, pageProps } = pageContext
-  const pageHtml = ReactDOMServer.renderToString(
+  const { Page, pageProps } = pageContext;
+  const stream = await renderToStream(
     <PageShell pageContext={pageContext}>
       <Page {...pageProps} />
-    </PageShell>
-  )
+    </PageShell>,
+    { disable: true }
+  );
 
   // See https://vite-plugin-ssr.com/head
-  const { documentProps } = pageContext.exports
-  const title = (documentProps && documentProps.title) || 'Vite SSR app'
-  const desc = (documentProps && documentProps.description) || 'App using Vite + vite-plugin-ssr'
+  const { documentProps } = pageContext.exports;
+  const title = (documentProps && documentProps.title) || "Vite SSR app";
+  const desc =
+    (documentProps && documentProps.description) ||
+    "App using Vite + vite-plugin-ssr";
 
   const documentHtml = escapeInject`<!DOCTYPE html>
     <html lang="en">
@@ -32,14 +35,14 @@ async function render(pageContext: PageContextServer) {
         <title>${title}</title>
       </head>
       <body>
-        <div id="page-view">${dangerouslySkipEscape(pageHtml)}</div>
+        <div id="page-view">${stream}</div>
       </body>
-    </html>`
+    </html>`;
 
   return {
     documentHtml,
     pageContext: {
       // We can add some `pageContext` here, which is useful if we want to do page redirection https://vite-plugin-ssr.com/page-redirection
-    }
-  }
+    },
+  };
 }
