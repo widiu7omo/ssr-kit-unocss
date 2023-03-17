@@ -23,6 +23,9 @@ function PageShell({
             <Link className="navitem" href="/">
               Home
             </Link>
+            <Link className="navitem" href="/star-wars">
+              Data Fetching
+            </Link>
             <Link className="navitem" href="/about">
               About
             </Link>
@@ -51,6 +54,7 @@ function Layout({ children }: { children: React.ReactNode }) {
 function Sidebar({ children }: { children: React.ReactNode }) {
   return (
     <div
+      id="sidebar"
       style={{
         padding: 20,
         flexShrink: 0,
@@ -68,6 +72,7 @@ function Sidebar({ children }: { children: React.ReactNode }) {
 function Content({ children }: { children: React.ReactNode }) {
   return (
     <div
+      id="page-container"
       style={{
         padding: 20,
         paddingBottom: 50,
@@ -75,7 +80,16 @@ function Content({ children }: { children: React.ReactNode }) {
         minHeight: "100vh",
       }}
     >
-      {children}
+      <div
+        id="page-content"
+        style={{
+          padding: 20,
+          paddingBottom: 50,
+          minHeight: "100vh",
+        }}
+      >
+        {children}
+      </div>
     </div>
   );
 }

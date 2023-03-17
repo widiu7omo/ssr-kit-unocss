@@ -1,12 +1,16 @@
+export { render };
+export { onHydrationEnd };
+export { onPageTransitionStart };
+export { onPageTransitionEnd };
+export const clientRouting = true;
+export const hydrationCanBeAborted = true;
+
+import "./css/index.css";
 import React from "react";
 import ReactDOMClient from "react-dom/client";
 import { getPageTitle } from "./getPageTitle";
 import { PageShell } from "./PageShell";
 import type { PageContextClient } from "./types";
-export const hydrationCanBeAborted = true;
-export const clientRouting = true;
-
-export { render };
 let root: ReactDOMClient.Root;
 async function render(pageContext: PageContextClient) {
   const { Page, pageProps } = pageContext;
@@ -27,7 +31,6 @@ async function render(pageContext: PageContextClient) {
   }
   document.title = getPageTitle(pageContext);
 }
-
 function onHydrationEnd() {
   console.log("Hydration finished; page is now interactive.");
 }
@@ -39,6 +42,3 @@ function onPageTransitionEnd() {
   console.log("Page transition end");
   document.querySelector("body")!.classList.remove("page-is-transitioning");
 }
-/* To enable Client-side Routing:
-
-// !! WARNING !! Before doing so, read https://vite-plugin-ssr.com/clientRouting */
