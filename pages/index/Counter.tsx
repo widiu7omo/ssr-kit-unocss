@@ -1,12 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-export { Counter }
+export { Counter };
 
 function Counter() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
   return (
-    <button type="button" onClick={() => setCount((count) => count + 1)}>
-      Counter {count}
-    </button>
-  )
+    <>
+      <button
+        bg-red-200
+        b-rd
+        px-3
+        py-1
+        text-lg
+        type="button"
+        onClick={() => setCount((count) => count + 1)}
+      >
+        Counter <span text-2xl>{count}</span>
+      </button>
+    </>
+  );
 }

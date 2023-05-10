@@ -1,6 +1,22 @@
 // uno.config.ts
-import { defineConfig } from "unocss";
-
+import {
+  defineConfig,
+  presetAttributify,
+  presetIcons,
+  presetUno,
+  transformerAttributifyJsx,
+} from "unocss";
+import { transformerCompileClass } from "unocss";
 export default defineConfig({
-  // ...UnoCSS options
+  transformers: [transformerAttributifyJsx()],
+  presets: [
+    presetUno(),
+    presetAttributify(),
+    presetIcons({
+      extraProperties: {
+        display: "inline-block",
+        "vertical-align": "middle",
+      },
+    }),
+  ],
 });
