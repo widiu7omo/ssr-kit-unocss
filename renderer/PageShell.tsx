@@ -3,6 +3,8 @@ import logo from "./logo.svg";
 import { PageContextProvider } from "./usePageContext";
 import type { PageContext } from "./types";
 import "./PageShell.css";
+import "@unocss/reset/tailwind-compat.css";
+import "virtual:uno.css";
 import { Link } from "./Link";
 
 export { PageShell };
