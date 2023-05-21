@@ -1,12 +1,15 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  '@formkit/auto-animate':
+    specifier: 1.0.0-beta.6
+    version: 1.0.0-beta.6
   '@prisma/client':
     specifier: ^4.14.1
     version: 4.14.1
   '@unocss/reset':
-    specifier: ^0.51.13
-    version: 0.51.13
+    specifier: ^0.52.0
+    version: 0.52.0
   compression:
     specifier: ^1.7.4
     version: 1.7.4
@@ -61,8 +64,8 @@ devDependencies:
     specifier: ^0.52.0
     version: 0.52.0
   '@unocss/transformer-attributify-jsx-babel':
-    specifier: ^0.51.13
-    version: 0.51.13
+    specifier: ^0.52.0
+    version: 0.52.0
   '@vitejs/plugin-react-swc':
     specifier: ^3.3.1
     version: 3.3.1(vite@4.3.8)
@@ -632,6 +635,10 @@ packages:
     requiresBuild: true
     optional: true
 
+  /@formkit/auto-animate@1.0.0-beta.6:
+    resolution: {integrity: sha512-PVDhLAlr+B4Xb7e+1wozBUWmXa6BFU8xUPR/W/E+TsQhPS1qkAdAsJ25keEnFrcePSnXHrOsh3tiFbEToOzV9w==}
+    dev: false
+
   /@iconify/types@2.0.0:
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
     dev: true
@@ -1012,10 +1019,6 @@ packages:
       unconfig: 0.3.7
     dev: true
 
-  /@unocss/core@0.51.13:
-    resolution: {integrity: sha512-SclWkqY2c+p5+PiqrbQkhJNEExPdeo71/aGFye10tpBkgPJWd5xC7dhg5F8M4VPNBtuNCrvBWyqNnunMyuz/WQ==}
-    dev: true
-
   /@unocss/core@0.52.0:
     resolution: {integrity: sha512-MGyG1LpiVtyrHmWmXiDRnf7j+JaJua14K058FGBAhNSLaG37dG6xIfwPuVDBOqEI8EgICmNTJs1T/ImQJYWxtw==}
     dev: true
@@ -1105,22 +1108,11 @@ packages:
       '@unocss/preset-mini': 0.52.0
     dev: true
 
-  /@unocss/reset@0.51.13:
-    resolution: {integrity: sha512-xwYJW6vNbHIpBtlFcW93fZxILZpWatcCc9nclSgsl0YlFUz9w4/aoV9KqwU62Y4VUteJxCZCCXa3pSiPO8h5KA==}
-    dev: false
-
   /@unocss/reset@0.52.0:
     resolution: {integrity: sha512-hRdgzpxWkDriRneLCv8cRNWBVNJ9FQVLY6jLk7C3MMaab0FH9JufdNwRw/yiqtEEhnnT2GF8IfN3HY69T01tNw==}
-    dev: true
 
   /@unocss/scope@0.52.0:
     resolution: {integrity: sha512-pGTBHdSWGzrcz/QnK4Dd8GUo0a1W3QbRNrIy8L0dgsI9QEBxSiAppiMMnnJZrQwUGDGy5DjkaCksOEArA28fCg==}
-    dev: true
-
-  /@unocss/transformer-attributify-jsx-babel@0.51.13:
-    resolution: {integrity: sha512-HMEeTi3FIuI5gMJnRICbWdDmraL4NfpjSTjSmAo6EsraBuNO2m+/5JZL5Fc1B3olKes2G84FDSlzfofHyinWzw==}
-    dependencies:
-      '@unocss/core': 0.51.13
     dev: true
 
   /@unocss/transformer-attributify-jsx-babel@0.52.0:

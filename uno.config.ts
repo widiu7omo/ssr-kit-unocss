@@ -11,9 +11,7 @@ export default defineConfig({
   transformers: [transformerAttributifyJsx(), transformerCompileClass()],
   presets: [
     presetUno(),
-    presetAttributify({
-      
-    }),
+    presetAttributify(),
     presetIcons({
       extraProperties: {
         display: "inline-block",

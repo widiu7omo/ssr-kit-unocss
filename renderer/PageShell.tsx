@@ -15,7 +15,8 @@ function PageShell({
   children: React.ReactNode;
   pageContext: PageContext;
 }) {
-  const UsedLayout = pageContext.exports.Layout || LayoutDefault;
+  const UsedLayout = (pageContext.exports.Layout ||
+    LayoutDefault) as React.ElementType;
   return (
     <React.StrictMode>
       <PageContextProvider pageContext={pageContext}>
