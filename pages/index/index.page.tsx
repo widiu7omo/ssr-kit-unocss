@@ -1,6 +1,6 @@
 import React from "react";
-import { Counter } from "./Counter";
-
+import { Counter } from "./components/Counter";
+export { AdminLayout as Layout } from "#app/layouts/AdminLayout";
 export { Page };
 
 function Page() {
@@ -25,6 +25,7 @@ function Page() {
         Welcome this is index page you should edit. Please make sure you have
         any knowledge about UnoCSS
       </h1>
+      <Counter />
     </div>
   );
 }

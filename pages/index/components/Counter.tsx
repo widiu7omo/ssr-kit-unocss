@@ -12,6 +12,7 @@ function Counter() {
         px-3
         py-1
         text-lg
+        text-gray-900
         type="button"
         onClick={() => setCount((count) => count + 1)}
       >

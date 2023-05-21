@@ -15,33 +15,32 @@ function PageShell({
   children: React.ReactNode;
   pageContext: PageContext;
 }) {
+  const UsedLayout = pageContext.exports.Layout || LayoutDefault;
   return (
     <React.StrictMode>
       <PageContextProvider pageContext={pageContext}>
-        <Layout>
-          <Sidebar>
-            <Logo />
-            <Link px-3 py-1 rounded-full href="/">
-              Home
-            </Link>
-            <Link px-3 py-1 rounded-full href="/star-wars">
-              Data Fetching
-            </Link>
-            <Link px-3 py-1 rounded-full href="/about">
-              About
-            </Link>
-          </Sidebar>
-          <Content>{children}</Content>
-        </Layout>
+        <UsedLayout>{children}</UsedLayout>
       </PageContextProvider>
     </React.StrictMode>
   );
 }
 
-function Layout({ children }: { children: React.ReactNode }) {
+function LayoutDefault({ children }: { children: React.ReactNode }) {
   return (
     <div flex max-w="900px" m-auto>
-      {children}
+      <Sidebar>
+        <Logo />
+        <Link px-3 py-1 rounded-full href="/">
+          Home
+        </Link>
+        <Link px-3 py-1 rounded-full href="/star-wars">
+          Data Fetching
+        </Link>
+        <Link px-3 py-1 rounded-full href="/about">
+          About
+        </Link>
+      </Sidebar>
+      <Content>{children}</Content>
     </div>
   );
 }
