@@ -1,0 +1,25 @@
+{
+  "resolvedId": "/Volumes/Data/playground/vite/ssr-kit-unocss/renderer/_error.page.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import React from 'react'\n\nexport { Page }\n\nfunction Page({ is404 }: { is404: boolean }) {\n  if (is404) {\n    return (\n      <>\n        <h1>404 Page Not Found</h1>\n        <p>This page could not be found.</p>\n      </>\n    )\n  } else {\n    return (\n      <>\n        <h1>500 Internal Server Error</h1>\n        <p>Something went wrong.</p>\n      </>\n    )\n  }\n}\n",
+      "start": 1684669401186,
+      "end": 1684669401336
+    },
+    {
+      "name": "unocss:transformers:pre",
+      "result": "import React from 'react';\nexport { Page };\nfunction Page({\n  is404\n}) {\n  if (is404) {\n    return <>\n        <h1>404 Page Not Found</h1>\n        <p>This page could not be found.</p>\n      </>;\n  } else {\n    return <>\n        <h1>500 Internal Server Error</h1>\n        <p>Something went wrong.</p>\n      </>;\n  }\n}",
+      "start": 1684669401336,
+      "end": 1684669401345,
+      "order": "pre"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { Fragment, jsx, jsxs } from \"react/jsx-runtime\";\nexport { Page };\nfunction Page({\n  is404\n}) {\n  if (is404) {\n    return /* @__PURE__ */ jsxs(Fragment, { children: [\n      /* @__PURE__ */ jsx(\"h1\", { children: \"404 Page Not Found\" }),\n      /* @__PURE__ */ jsx(\"p\", { children: \"This page could not be found.\" })\n    ] });\n  } else {\n    return /* @__PURE__ */ jsxs(Fragment, { children: [\n      /* @__PURE__ */ jsx(\"h1\", { children: \"500 Internal Server Error\" }),\n      /* @__PURE__ */ jsx(\"p\", { children: \"Something went wrong.\" })\n    ] });\n  }\n}\n",
+      "start": 1684669401345,
+      "end": 1684669401362,
+      "order": "normal"
+    }
+  ]
+}

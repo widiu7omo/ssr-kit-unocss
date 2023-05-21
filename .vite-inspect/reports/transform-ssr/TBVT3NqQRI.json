@@ -1,0 +1,25 @@
+{
+  "resolvedId": "/Volumes/Data/playground/vite/ssr-kit-unocss/renderer/PageShell.css",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "/* This CSS is common to all pages */\n\nbody {\n  margin: 0;\n  font-family: sans-serif;\n}\n* {\n  box-sizing: border-box;\n}\na {\n  text-decoration: none;\n}\n\n.navitem {\n  padding: 3px 10px;\n}\n.navitem.is-active {\n  background-color: #eee;\n}\n",
+      "start": 1684669401421,
+      "end": 1684669401611
+    },
+    {
+      "name": "vite:css",
+      "result": "/* This CSS is common to all pages */\n\nbody {\n  margin: 0;\n  font-family: sans-serif;\n}\n* {\n  box-sizing: border-box;\n}\na {\n  text-decoration: none;\n}\n\n.navitem {\n  padding: 3px 10px;\n}\n.navitem.is-active {\n  background-color: #eee;\n}\n",
+      "start": 1684669401611,
+      "end": 1684669401723,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "export default ''",
+      "start": 1684669401724,
+      "end": 1684669401724,
+      "order": "normal"
+    }
+  ]
+}

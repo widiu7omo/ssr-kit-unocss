@@ -1,0 +1,328 @@
+{
+  "root": "/Volumes/Data/playground/vite/ssr-kit-unocss",
+  "modules": [],
+  "ssrModules": [
+    {
+      "id": "/Volumes/Data/playground/vite/ssr-kit-unocss/node_modules/.pnpm/@unocss+reset@0.51.13/node_modules/@unocss/reset/tailwind-compat.css",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 200
+        },
+        {
+          "name": "vite:css",
+          "transform": 102
+        },
+        {
+          "name": "vite:css-post",
+          "transform": 0
+        }
+      ],
+      "virtual": false
+    },
+    {
+      "id": "/Volumes/Data/playground/vite/ssr-kit-unocss/node_modules/.pnpm/vite-plugin-ssr@0.4.126_react-streaming@0.3.11_vite@4.3.8/node_modules/vite-plugin-ssr/dist/cjs/node/importBuild.js",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 120
+        }
+      ],
+      "virtual": false
+    },
+    {
+      "id": "/Volumes/Data/playground/vite/ssr-kit-unocss/pages/about/code.css",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 50
+        },
+        {
+          "name": "vite:css",
+          "transform": 313
+        },
+        {
+          "name": "vite:css-post",
+          "transform": 0
+        }
+      ],
+      "virtual": false
+    },
+    {
+      "id": "/Volumes/Data/playground/vite/ssr-kit-unocss/pages/about/index.page.tsx",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 85
+        },
+        {
+          "name": "unocss:transformers:pre",
+          "transform": 11
+        },
+        {
+          "name": "vite:esbuild",
+          "transform": 66
+        }
+      ],
+      "virtual": false
+    },
+    {
+      "id": "/Volumes/Data/playground/vite/ssr-kit-unocss/pages/index/index.page.tsx",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 16
+        },
+        {
+          "name": "unocss:transformers:pre",
+          "transform": 50
+        },
+        {
+          "name": "vite:esbuild",
+          "transform": 60
+        }
+      ],
+      "virtual": false
+    },
+    {
+      "id": "/Volumes/Data/playground/vite/ssr-kit-unocss/pages/star-wars/@id.page.tsx",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 69
+        },
+        {
+          "name": "unocss:transformers:pre",
+          "transform": 15
+        },
+        {
+          "name": "vite:esbuild",
+          "transform": 78
+        }
+      ],
+      "virtual": false
+    },
+    {
+      "id": "/Volumes/Data/playground/vite/ssr-kit-unocss/pages/star-wars/filterMovieData.ts",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 49
+        },
+        {
+          "name": "vite:esbuild",
+          "transform": 13
+        }
+      ],
+      "virtual": false
+    },
+    {
+      "id": "/Volumes/Data/playground/vite/ssr-kit-unocss/pages/star-wars/index/index.page.server.ts",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 102
+        },
+        {
+          "name": "vite:esbuild",
+          "transform": 59
+        }
+      ],
+      "virtual": false
+    },
+    {
+      "id": "/Volumes/Data/playground/vite/ssr-kit-unocss/pages/star-wars/index/index.page.tsx",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 109
+        },
+        {
+          "name": "unocss:transformers:pre",
+          "transform": 10
+        },
+        {
+          "name": "vite:esbuild",
+          "transform": 57
+        }
+      ],
+      "virtual": false
+    },
+    {
+      "id": "/Volumes/Data/playground/vite/ssr-kit-unocss/renderer/Link.tsx",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 190
+        },
+        {
+          "name": "unocss:transformers:pre",
+          "transform": 8
+        },
+        {
+          "name": "vite:esbuild",
+          "transform": 3
+        }
+      ],
+      "virtual": false
+    },
+    {
+      "id": "/Volumes/Data/playground/vite/ssr-kit-unocss/renderer/PageShell.css",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 190
+        },
+        {
+          "name": "vite:css",
+          "transform": 112
+        },
+        {
+          "name": "vite:css-post",
+          "transform": 0
+        }
+      ],
+      "virtual": false
+    },
+    {
+      "id": "/Volumes/Data/playground/vite/ssr-kit-unocss/renderer/PageShell.tsx",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 34
+        },
+        {
+          "name": "unocss:transformers:pre",
+          "transform": 25
+        },
+        {
+          "name": "vite:esbuild",
+          "transform": 17
+        }
+      ],
+      "virtual": false
+    },
+    {
+      "id": "/Volumes/Data/playground/vite/ssr-kit-unocss/renderer/_default.page.client.tsx?extractExportNames&lang.tsx",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 3
+        },
+        {
+          "name": "unocss:transformers:pre",
+          "transform": 9
+        },
+        {
+          "name": "vite:esbuild",
+          "transform": 6
+        },
+        {
+          "name": "vite-plugin-ssr:extractExportNames",
+          "transform": 1
+        }
+      ],
+      "virtual": false
+    },
+    {
+      "id": "/Volumes/Data/playground/vite/ssr-kit-unocss/renderer/_default.page.server.tsx",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 2
+        },
+        {
+          "name": "unocss:transformers:pre",
+          "transform": 13
+        },
+        {
+          "name": "vite:esbuild",
+          "transform": 110
+        }
+      ],
+      "virtual": false
+    },
+    {
+      "id": "/Volumes/Data/playground/vite/ssr-kit-unocss/renderer/_error.page.tsx",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 150
+        },
+        {
+          "name": "unocss:transformers:pre",
+          "transform": 9
+        },
+        {
+          "name": "vite:esbuild",
+          "transform": 17
+        }
+      ],
+      "virtual": false
+    },
+    {
+      "id": "/Volumes/Data/playground/vite/ssr-kit-unocss/renderer/logo.svg",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:asset",
+          "transform": 31
+        }
+      ],
+      "virtual": true
+    },
+    {
+      "id": "/Volumes/Data/playground/vite/ssr-kit-unocss/renderer/usePageContext.tsx",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "vite:load-fallback",
+          "transform": 145
+        },
+        {
+          "name": "unocss:transformers:pre",
+          "transform": 42
+        },
+        {
+          "name": "vite:esbuild",
+          "transform": 13
+        }
+      ],
+      "virtual": false
+    },
+    {
+      "id": "/__uno.css",
+      "deps": [],
+      "plugins": [
+        {
+          "name": "unocss:global:build:scan",
+          "transform": 0
+        },
+        {
+          "name": "vite:css",
+          "transform": 303
+        },
+        {
+          "name": "vite:css-post",
+          "transform": 0
+        }
+      ],
+      "virtual": true
+    }
+  ]
+}

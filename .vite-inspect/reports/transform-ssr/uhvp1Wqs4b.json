@@ -1,0 +1,25 @@
+{
+  "resolvedId": "/Volumes/Data/playground/vite/ssr-kit-unocss/pages/about/index.page.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import React from 'react'\nimport './code.css'\n\nexport { Page }\n\nfunction Page() {\n  return (\n    <>\n      <h1>About</h1>\n      <p>\n        Example of using <code>vite-plugin-ssr</code>.\n      </p>\n    </>\n  )\n}\n",
+      "start": 1684669401186,
+      "end": 1684669401271
+    },
+    {
+      "name": "unocss:transformers:pre",
+      "result": "import React from 'react';\nimport './code.css';\nexport { Page };\nfunction Page() {\n  return <>\n      <h1>About</h1>\n      <p>\n        Example of using <code>vite-plugin-ssr</code>.\n      </p>\n    </>;\n}",
+      "start": 1684669401271,
+      "end": 1684669401282,
+      "order": "pre"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { Fragment, jsx, jsxs } from \"react/jsx-runtime\";\nimport \"./code.css\";\nexport { Page };\nfunction Page() {\n  return /* @__PURE__ */ jsxs(Fragment, { children: [\n    /* @__PURE__ */ jsx(\"h1\", { children: \"About\" }),\n    /* @__PURE__ */ jsxs(\"p\", { children: [\n      \"Example of using \",\n      /* @__PURE__ */ jsx(\"code\", { children: \"vite-plugin-ssr\" }),\n      \".\"\n    ] })\n  ] });\n}\n",
+      "start": 1684669401282,
+      "end": 1684669401348,
+      "order": "normal"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "resolvedId": "/Volumes/Data/playground/vite/ssr-kit-unocss/renderer/Link.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import React from 'react'\nimport { usePageContext } from './usePageContext'\n\nexport { Link }\n\nfunction Link(props: { href?: string; className?: string; children: React.ReactNode }) {\n  const pageContext = usePageContext()\n  const className = [props.className, pageContext.urlPathname === props.href && 'is-active'].filter(Boolean).join(' ')\n  return <a {...props} className={className} />\n}\n",
+      "start": 1684669401421,
+      "end": 1684669401611
+    },
+    {
+      "name": "unocss:transformers:pre",
+      "result": "import React from 'react';\nimport { usePageContext } from './usePageContext';\nexport { Link };\nfunction Link(props) {\n  const pageContext = usePageContext();\n  const className = [props.className, pageContext.urlPathname === props.href && 'is-active'].filter(Boolean).join(' ');\n  return <a {...props} className={className} />;\n}",
+      "start": 1684669401611,
+      "end": 1684669401619,
+      "order": "pre"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx } from \"react/jsx-runtime\";\nimport { usePageContext } from \"./usePageContext\";\nexport { Link };\nfunction Link(props) {\n  const pageContext = usePageContext();\n  const className = [props.className, pageContext.urlPathname === props.href && \"is-active\"].filter(Boolean).join(\" \");\n  return /* @__PURE__ */ jsx(\"a\", { ...props, className });\n}\n",
+      "start": 1684669401620,
+      "end": 1684669401623,
+      "order": "normal"
+    }
+  ]
+}

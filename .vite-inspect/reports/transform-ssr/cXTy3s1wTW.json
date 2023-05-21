@@ -1,0 +1,25 @@
+{
+  "resolvedId": "/__uno.css",
+  "transforms": [
+    {
+      "name": "unocss:global:build:scan",
+      "result": "#--unocss--{layer:__ALL__}",
+      "start": 1684669401420,
+      "end": 1684669401420
+    },
+    {
+      "name": "vite:css",
+      "result": "#--unocss--{layer:__ALL__}",
+      "start": 1684669401420,
+      "end": 1684669401723,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "export default ''",
+      "start": 1684669401724,
+      "end": 1684669401724,
+      "order": "normal"
+    }
+  ]
+}

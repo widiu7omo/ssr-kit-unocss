@@ -7,30 +7,32 @@
     "server:prod": "cross-env NODE_ENV=production ts-node ./server/index.ts"
   },
   "dependencies": {
-    "@prisma/client": "^4.14.0",
-    "@unocss/reset": "^0.51.12",
+    "@prisma/client": "^4.14.1",
+    "@unocss/reset": "^0.51.13",
     "compression": "^1.7.4",
     "cross-env": "^7.0.3",
-    "cross-fetch": "^3.1.5",
+    "cross-fetch": "^3.1.6",
     "express": "^4.18.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-streaming": "^0.3.10",
+    "react-streaming": "^0.3.11",
     "sirv": "^2.0.3",
-    "vite": "^4.3.5",
-    "vite-plugin-ssr": "^0.4.123"
+    "vite": "^4.3.8",
+    "vite-plugin-ssr": "^0.4.126"
   },
   "type": "module",
   "devDependencies": {
+    "@babel/preset-typescript": "^7.21.5",
     "@types/compression": "^1.7.2",
     "@types/express": "^4.17.17",
-    "@types/node": "^18.16.6",
+    "@types/node": "^18.16.13",
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
+    "@unocss/transformer-attributify-jsx-babel": "^0.51.13",
     "@vitejs/plugin-react-swc": "^3.3.1",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.5",
-    "unocss": "^0.51.12",
+    "unocss": "^0.52.0",
     "vite-plugin-inspect": "^0.7.26"
   }
 }

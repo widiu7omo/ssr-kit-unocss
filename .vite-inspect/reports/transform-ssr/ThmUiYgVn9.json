@@ -1,0 +1,11 @@
+{
+  "resolvedId": "/Volumes/Data/playground/vite/ssr-kit-unocss/renderer/logo.svg",
+  "transforms": [
+    {
+      "name": "vite:asset",
+      "result": "export default \"__VITE_ASSET__c2b3a5f0__\"",
+      "start": 1684669401335,
+      "end": 1684669401366
+    }
+  ]
+}

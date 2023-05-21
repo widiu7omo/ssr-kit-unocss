@@ -1,0 +1,32 @@
+{
+  "resolvedId": "/Volumes/Data/playground/vite/ssr-kit-unocss/renderer/_default.page.client.tsx?extractExportNames&lang.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "export { render };\nexport { onHydrationEnd };\nexport { onPageTransitionStart };\nexport { onPageTransitionEnd };\nexport const clientRouting = true;\nexport const hydrationCanBeAborted = true;\n\nimport \"./css/index.css\";\nimport React from \"react\";\nimport ReactDOMClient from \"react-dom/client\";\nimport { getPageTitle } from \"./getPageTitle\";\nimport { PageShell } from \"./PageShell\";\nimport type { PageContextClient } from \"./types\";\nlet root: ReactDOMClient.Root;\nasync function render(pageContext: PageContextClient) {\n  const { Page, pageProps } = pageContext;\n  const page = (\n    <PageShell pageContext={pageContext}>\n      <Page {...pageProps} />\n    </PageShell>\n  );\n\n  const container = document.getElementById(\"page-view\")!;\n  if (pageContext.isHydration) {\n    root = ReactDOMClient.hydrateRoot(container, page);\n  } else {\n    if (!root) {\n      root = ReactDOMClient.createRoot(container);\n    }\n    root.render(page);\n  }\n  document.title = getPageTitle(pageContext);\n}\nfunction onHydrationEnd() {\n  console.log(\"Hydration finished; page is now interactive.\");\n}\nfunction onPageTransitionStart() {\n  console.log(\"Page transition start\");\n  document.querySelector(\"body\")!.classList.add(\"page-is-transitioning\");\n}\nfunction onPageTransitionEnd() {\n  console.log(\"Page transition end\");\n  document.querySelector(\"body\")!.classList.remove(\"page-is-transitioning\");\n}\n",
+      "start": 1684669401703,
+      "end": 1684669401706
+    },
+    {
+      "name": "unocss:transformers:pre",
+      "result": "export { render };\nexport { onHydrationEnd };\nexport { onPageTransitionStart };\nexport { onPageTransitionEnd };\nexport const clientRouting = true;\nexport const hydrationCanBeAborted = true;\nimport \"./css/index.css\";\nimport React from \"react\";\nimport ReactDOMClient from \"react-dom/client\";\nimport { getPageTitle } from \"./getPageTitle\";\nimport { PageShell } from \"./PageShell\";\nlet root;\nasync function render(pageContext) {\n  const {\n    Page,\n    pageProps\n  } = pageContext;\n  const page = <PageShell pageContext={pageContext}>\n      <Page {...pageProps} />\n    </PageShell>;\n  const container = document.getElementById(\"page-view\");\n  if (pageContext.isHydration) {\n    root = ReactDOMClient.hydrateRoot(container, page);\n  } else {\n    if (!root) {\n      root = ReactDOMClient.createRoot(container);\n    }\n    root.render(page);\n  }\n  document.title = getPageTitle(pageContext);\n}\nfunction onHydrationEnd() {\n  console.log(\"Hydration finished; page is now interactive.\");\n}\nfunction onPageTransitionStart() {\n  console.log(\"Page transition start\");\n  document.querySelector(\"body\").classList.add(\"page-is-transitioning\");\n}\nfunction onPageTransitionEnd() {\n  console.log(\"Page transition end\");\n  document.querySelector(\"body\").classList.remove(\"page-is-transitioning\");\n}",
+      "start": 1684669401707,
+      "end": 1684669401716,
+      "order": "pre"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx } from \"react/jsx-runtime\";\nexport { render };\nexport { onHydrationEnd };\nexport { onPageTransitionStart };\nexport { onPageTransitionEnd };\nexport const clientRouting = true;\nexport const hydrationCanBeAborted = true;\nimport \"./css/index.css\";\nimport ReactDOMClient from \"react-dom/client\";\nimport { getPageTitle } from \"./getPageTitle\";\nimport { PageShell } from \"./PageShell\";\nlet root;\nasync function render(pageContext) {\n  const {\n    Page,\n    pageProps\n  } = pageContext;\n  const page = /* @__PURE__ */ jsx(PageShell, { pageContext, children: /* @__PURE__ */ jsx(Page, { ...pageProps }) });\n  const container = document.getElementById(\"page-view\");\n  if (pageContext.isHydration) {\n    root = ReactDOMClient.hydrateRoot(container, page);\n  } else {\n    if (!root) {\n      root = ReactDOMClient.createRoot(container);\n    }\n    root.render(page);\n  }\n  document.title = getPageTitle(pageContext);\n}\nfunction onHydrationEnd() {\n  console.log(\"Hydration finished; page is now interactive.\");\n}\nfunction onPageTransitionStart() {\n  console.log(\"Page transition start\");\n  document.querySelector(\"body\").classList.add(\"page-is-transitioning\");\n}\nfunction onPageTransitionEnd() {\n  console.log(\"Page transition end\");\n  document.querySelector(\"body\").classList.remove(\"page-is-transitioning\");\n}\n",
+      "start": 1684669401716,
+      "end": 1684669401722,
+      "order": "normal"
+    },
+    {
+      "name": "vite-plugin-ssr:extractExportNames",
+      "result": "\nexport const exportNames = [\"render\", \"onHydrationEnd\", \"onPageTransitionStart\", \"onPageTransitionEnd\", \"clientRouting\", \"hydrationCanBeAborted\"];",
+      "start": 1684669401722,
+      "end": 1684669401723,
+      "order": "post"
+    }
+  ]
+}

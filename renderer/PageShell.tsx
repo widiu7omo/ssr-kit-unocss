@@ -2,7 +2,6 @@ import React from "react";
 import logo from "./logo.svg";
 import { PageContextProvider } from "./usePageContext";
 import type { PageContext } from "./types";
-import "./PageShell.css";
 import "@unocss/reset/tailwind-compat.css";
 import "virtual:uno.css";
 import { Link } from "./Link";
@@ -22,13 +21,13 @@ function PageShell({
         <Layout>
           <Sidebar>
             <Logo />
-            <Link className="navitem" href="/">
+            <Link px-3 py-1 rounded-full href="/">
               Home
             </Link>
-            <Link className="navitem" href="/star-wars">
+            <Link px-3 py-1 rounded-full href="/star-wars">
               Data Fetching
             </Link>
-            <Link className="navitem" href="/about">
+            <Link px-3 py-1 rounded-full href="/about">
               About
             </Link>
           </Sidebar>
@@ -41,13 +40,7 @@ function PageShell({
 
 function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div
-      style={{
-        display: "flex",
-        maxWidth: 900,
-        margin: "auto",
-      }}
-    >
+    <div flex max-w="900px" m-auto>
       {children}
     </div>
   );
@@ -57,14 +50,13 @@ function Sidebar({ children }: { children: React.ReactNode }) {
   return (
     <div
       id="sidebar"
-      style={{
-        padding: 20,
-        flexShrink: 0,
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        lineHeight: "1.8em",
-      }}
+      p="20px"
+      space-y-2
+      flex
+      flex-col
+      items-center
+      line-height="1.8em"
+      flex-shrink-0
     >
       {children}
     </div>
@@ -75,15 +67,17 @@ function Content({ children }: { children: React.ReactNode }) {
   return (
     <div
       id="page-container"
-      style={{
-        padding: 20,
-        paddingBottom: 50,
-        borderLeft: "2px solid #eee",
-        minHeight: "100vh",
-      }}
+      p="20px"
+      pb="50px"
+      border-l="2px"
+      border-gray
+      min-h="100vh"
     >
       <div
         id="page-content"
+        p="20px"
+        pb="50px"
+        min-h-screen
         style={{
           padding: 20,
           paddingBottom: 50,
@@ -98,12 +92,7 @@ function Content({ children }: { children: React.ReactNode }) {
 
 function Logo() {
   return (
-    <div
-      style={{
-        marginTop: 20,
-        marginBottom: 10,
-      }}
-    >
+    <div mt="20px" mb="10px">
       <a href="/">
         <img src={logo} height={64} width={64} alt="logo" />
       </a>

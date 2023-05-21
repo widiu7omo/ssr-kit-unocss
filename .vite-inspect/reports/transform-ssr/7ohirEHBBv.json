@@ -1,0 +1,11 @@
+{
+  "resolvedId": "/Volumes/Data/playground/vite/ssr-kit-unocss/node_modules/.pnpm/vite-plugin-ssr@0.4.126_react-streaming@0.3.11_vite@4.3.8/node_modules/vite-plugin-ssr/dist/cjs/node/importBuild.js",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "\"use strict\";\n// TODO/v1-release: remove\nconsole.warn(\"[vite-plugin-ssr][Warning] importBuild.js is not needed anymore; it has no effect. Remove `import 'dist/server/importBuild.js'` to remove this warning. More infos at https://vite-plugin-ssr.com/importBuild.js\");\n",
+      "start": 1684669401186,
+      "end": 1684669401306
+    }
+  ]
+}

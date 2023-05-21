@@ -1,0 +1,25 @@
+{
+  "resolvedId": "/Volumes/Data/playground/vite/ssr-kit-unocss/pages/index/index.page.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import React from \"react\";\nimport { Counter } from \"./Counter\";\n\nexport { Page };\n\nfunction Page() {\n  return (\n    <div bg-black rounded-2xl text-white p-4 font-bold text-3xl>\n      <h1\n        leading-11\n        text-center\n        min-w-full\n        p-2\n        text-2xl\n        font-bold\n        text-transparent\n        b-rd\n        bg-clip-text\n        caret-pink-600\n        bg-gradient-radial\n        from-violet-400\n        via-green-400\n        to-purple-500\n      >\n        Welcome this is index page you should edit. Please make sure you have\n        any knowledge about UnoCSS\n      </h1>\n    </div>\n  );\n}\n",
+      "start": 1684669401186,
+      "end": 1684669401202
+    },
+    {
+      "name": "unocss:transformers:pre",
+      "result": "import React from \"react\";\nexport { Page };\nfunction Page() {\n  return <div bg-black=\"\" rounded-2xl=\"\" text-white=\"\" p-4=\"\" font-bold=\"\" text-3xl=\"\">\n      <h1 leading-11=\"\" text-center=\"\" min-w-full=\"\" p-2=\"\" text-2xl=\"\" font-bold=\"\" text-transparent=\"\" b-rd=\"\" bg-clip-text=\"\" caret-pink-600=\"\" bg-gradient-radial=\"\" from-violet-400=\"\" via-green-400=\"\" to-purple-500=\"\">\n        Welcome this is index page you should edit. Please make sure you have\n        any knowledge about UnoCSS\n      </h1>\n    </div>;\n}",
+      "start": 1684669401202,
+      "end": 1684669401252,
+      "order": "pre"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx } from \"react/jsx-runtime\";\nexport { Page };\nfunction Page() {\n  return /* @__PURE__ */ jsx(\"div\", { \"bg-black\": \"\", \"rounded-2xl\": \"\", \"text-white\": \"\", \"p-4\": \"\", \"font-bold\": \"\", \"text-3xl\": \"\", children: /* @__PURE__ */ jsx(\"h1\", { \"leading-11\": \"\", \"text-center\": \"\", \"min-w-full\": \"\", \"p-2\": \"\", \"text-2xl\": \"\", \"font-bold\": \"\", \"text-transparent\": \"\", \"b-rd\": \"\", \"bg-clip-text\": \"\", \"caret-pink-600\": \"\", \"bg-gradient-radial\": \"\", \"from-violet-400\": \"\", \"via-green-400\": \"\", \"to-purple-500\": \"\", children: \"Welcome this is index page you should edit. Please make sure you have any knowledge about UnoCSS\" }) });\n}\n",
+      "start": 1684669401252,
+      "end": 1684669401312,
+      "order": "normal"
+    }
+  ]
+}

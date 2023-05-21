@@ -1,0 +1,18 @@
+{
+  "resolvedId": "/Volumes/Data/playground/vite/ssr-kit-unocss/pages/star-wars/filterMovieData.ts",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import type { MovieDetails } from './types'\n\nexport { filterMovieData }\n\nfunction filterMovieData(movie: MovieDetails & Record<string, unknown>): MovieDetails {\n  const { id, title, release_date, director, producer } = movie\n  movie = { id, title, release_date, director, producer }\n  return movie\n}\n",
+      "start": 1684669401360,
+      "end": 1684669401409
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "export { filterMovieData };\nfunction filterMovieData(movie) {\n  const { id, title, release_date, director, producer } = movie;\n  movie = { id, title, release_date, director, producer };\n  return movie;\n}\n",
+      "start": 1684669401409,
+      "end": 1684669401422,
+      "order": "normal"
+    }
+  ]
+}

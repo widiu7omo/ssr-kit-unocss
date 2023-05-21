@@ -5,7 +5,7 @@ export { Page };
 
 function Page() {
   return (
-    <div bg-black rounded-2xl text-white p-4 font-bold text-3xl>
+    <div text-amber rounded-2xl text-white p-4 font-bold text-3xl bg-dark>
       <h1
         leading-11
         text-center

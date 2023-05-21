@@ -1,0 +1,25 @@
+{
+  "resolvedId": "/Volumes/Data/playground/vite/ssr-kit-unocss/renderer/usePageContext.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "// `usePageContext` allows us to access `pageContext` in any React component.\n// See https://vite-plugin-ssr.com/pageContext-anywhere\n\nimport React, { useContext } from 'react'\nimport type { PageContext } from './types'\n\nexport { PageContextProvider }\nexport { usePageContext }\n\nconst Context = React.createContext<PageContext>(undefined as any)\n\nfunction PageContextProvider({ pageContext, children }: { pageContext: PageContext; children: React.ReactNode }) {\n  return <Context.Provider value={pageContext}>{children}</Context.Provider>\n}\n\nfunction usePageContext() {\n  const pageContext = useContext(Context)\n  return pageContext\n}\n",
+      "start": 1684669401421,
+      "end": 1684669401566
+    },
+    {
+      "name": "unocss:transformers:pre",
+      "result": "// `usePageContext` allows us to access `pageContext` in any React component.\n// See https://vite-plugin-ssr.com/pageContext-anywhere\n\nimport React, { useContext } from 'react';\nexport { PageContextProvider };\nexport { usePageContext };\nconst Context = React.createContext(undefined);\nfunction PageContextProvider({\n  pageContext,\n  children\n}) {\n  return <Context.Provider value={pageContext}>{children}</Context.Provider>;\n}\nfunction usePageContext() {\n  const pageContext = useContext(Context);\n  return pageContext;\n}",
+      "start": 1684669401566,
+      "end": 1684669401608,
+      "order": "pre"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { jsx } from \"react/jsx-runtime\";\nimport React, { useContext } from \"react\";\nexport { PageContextProvider };\nexport { usePageContext };\nconst Context = React.createContext(void 0);\nfunction PageContextProvider({\n  pageContext,\n  children\n}) {\n  return /* @__PURE__ */ jsx(Context.Provider, { value: pageContext, children });\n}\nfunction usePageContext() {\n  const pageContext = useContext(Context);\n  return pageContext;\n}\n",
+      "start": 1684669401610,
+      "end": 1684669401623,
+      "order": "normal"
+    }
+  ]
+}

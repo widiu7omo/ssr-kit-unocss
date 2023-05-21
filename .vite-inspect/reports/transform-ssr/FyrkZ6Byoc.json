@@ -1,0 +1,25 @@
+{
+  "resolvedId": "/Volumes/Data/playground/vite/ssr-kit-unocss/pages/about/code.css",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "code {\n  font-family: monospace;\n  background-color: #eaeaea;\n  padding: 3px 5px;\n  border-radius: 4px;\n}\n",
+      "start": 1684669401360,
+      "end": 1684669401410
+    },
+    {
+      "name": "vite:css",
+      "result": "code {\n  font-family: monospace;\n  background-color: #eaeaea;\n  padding: 3px 5px;\n  border-radius: 4px;\n}\n",
+      "start": 1684669401410,
+      "end": 1684669401723,
+      "order": "normal"
+    },
+    {
+      "name": "vite:css-post",
+      "result": "export default ''",
+      "start": 1684669401724,
+      "end": 1684669401724,
+      "order": "normal"
+    }
+  ]
+}

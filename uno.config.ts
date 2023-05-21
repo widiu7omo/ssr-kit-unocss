@@ -4,14 +4,16 @@ import {
   presetAttributify,
   presetIcons,
   presetUno,
-  transformerAttributifyJsx,
+  transformerCompileClass,
 } from "unocss";
-import { transformerCompileClass } from "unocss";
+import transformerAttributifyJsx from "@unocss/transformer-attributify-jsx-babel";
 export default defineConfig({
-  transformers: [transformerAttributifyJsx()],
+  transformers: [transformerAttributifyJsx(), transformerCompileClass()],
   presets: [
     presetUno(),
-    presetAttributify(),
+    presetAttributify({
+      
+    }),
     presetIcons({
       extraProperties: {
         display: "inline-block",

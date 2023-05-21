@@ -1,0 +1,25 @@
+{
+  "resolvedId": "/Volumes/Data/playground/vite/ssr-kit-unocss/pages/star-wars/index/index.page.tsx",
+  "transforms": [
+    {
+      "name": "vite:load-fallback",
+      "result": "import React from 'react'\nimport type { Movie } from '../types'\n\nexport { Page }\n\nfunction Page({ movies }: { movies: Movie[] }) {\n  return (\n    <>\n      <h1>Star Wars Movies</h1>\n      <ol>\n        {movies.map(({ id, title, release_date }) => (\n          <li key={id}>\n            <a href={`/star-wars/${id}`}>{title}</a> ({release_date})\n          </li>\n        ))}\n      </ol>\n      <p>\n        Source: <a href=\"https://star-wars.brillout.com\">star-wars.brillout.com</a>.\n      </p>\n      <p>\n        Data can be fetched by using the <code>onBeforeRender()</code> hook.\n      </p>\n    </>\n  )\n}\n",
+      "start": 1684669401186,
+      "end": 1684669401295
+    },
+    {
+      "name": "unocss:transformers:pre",
+      "result": "import React from 'react';\nexport { Page };\nfunction Page({\n  movies\n}) {\n  return <>\n      <h1>Star Wars Movies</h1>\n      <ol>\n        {movies.map(({\n        id,\n        title,\n        release_date\n      }) => <li key={id}>\n            <a href={`/star-wars/${id}`}>{title}</a> ({release_date})\n          </li>)}\n      </ol>\n      <p>\n        Source: <a href=\"https://star-wars.brillout.com\">star-wars.brillout.com</a>.\n      </p>\n      <p>\n        Data can be fetched by using the <code>onBeforeRender()</code> hook.\n      </p>\n    </>;\n}",
+      "start": 1684669401295,
+      "end": 1684669401305,
+      "order": "pre"
+    },
+    {
+      "name": "vite:esbuild",
+      "result": "import { Fragment, jsx, jsxs } from \"react/jsx-runtime\";\nexport { Page };\nfunction Page({\n  movies\n}) {\n  return /* @__PURE__ */ jsxs(Fragment, { children: [\n    /* @__PURE__ */ jsx(\"h1\", { children: \"Star Wars Movies\" }),\n    /* @__PURE__ */ jsx(\"ol\", { children: movies.map(({\n      id,\n      title,\n      release_date\n    }) => /* @__PURE__ */ jsxs(\"li\", { children: [\n      /* @__PURE__ */ jsx(\"a\", { href: `/star-wars/${id}`, children: title }),\n      \" (\",\n      release_date,\n      \")\"\n    ] }, id)) }),\n    /* @__PURE__ */ jsxs(\"p\", { children: [\n      \"Source: \",\n      /* @__PURE__ */ jsx(\"a\", { href: \"https://star-wars.brillout.com\", children: \"star-wars.brillout.com\" }),\n      \".\"\n    ] }),\n    /* @__PURE__ */ jsxs(\"p\", { children: [\n      \"Data can be fetched by using the \",\n      /* @__PURE__ */ jsx(\"code\", { children: \"onBeforeRender()\" }),\n      \" hook.\"\n    ] })\n  ] });\n}\n",
+      "start": 1684669401305,
+      "end": 1684669401362,
+      "order": "normal"
+    }
+  ]
+}
