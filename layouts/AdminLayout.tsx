@@ -48,6 +48,16 @@ export function AdminLayout({ children }: AdminLayoutProps) {
             px-4
             py-1
             backdrop-blur-md
+            href="/star-wars"
+          >
+            Fetch
+          </Link>
+          <Link
+            bg-gray="2/90"
+            rounded-full
+            px-4
+            py-1
+            backdrop-blur-md
             href="/about"
           >
             About

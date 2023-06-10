@@ -3,8 +3,8 @@ import fetch from "cross-fetch";
 import { filterMovieData } from "./filterMovieData";
 import type { PageContextBuiltIn } from "vite-plugin-ssr/types";
 import type { MovieDetails } from "./types";
-
-export { Page };
+import { AdminLayout } from "#app/layouts/AdminLayout";
+export { Page, AdminLayout as Layout };
 export { onBeforeRender };
 
 function Page({ movie }: { movie: MovieDetails }) {

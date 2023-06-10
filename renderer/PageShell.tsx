@@ -20,7 +20,9 @@ function PageShell({
   return (
     <React.StrictMode>
       <PageContextProvider pageContext={pageContext}>
-        <UsedLayout>{children}</UsedLayout>
+        <UsedLayout>
+          <Content>{children}</Content>
+        </UsedLayout>
       </PageContextProvider>
     </React.StrictMode>
   );
@@ -65,25 +67,8 @@ function Sidebar({ children }: { children: React.ReactNode }) {
 
 function Content({ children }: { children: React.ReactNode }) {
   return (
-    <div
-      id="page-container"
-      p="20px"
-      pb="50px"
-      border-l="2px"
-      border-gray
-      min-h="100vh"
-    >
-      <div
-        id="page-content"
-        p="20px"
-        pb="50px"
-        min-h-screen
-        style={{
-          padding: 20,
-          paddingBottom: 50,
-          minHeight: "100vh",
-        }}
-      >
+    <div id="page-container" w-full min-h-screen>
+      <div id="page-content" w-full min-h-screen>
         {children}
       </div>
     </div>

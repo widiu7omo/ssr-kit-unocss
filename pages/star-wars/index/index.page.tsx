@@ -1,7 +1,7 @@
-import React from 'react'
-import type { Movie } from '../types'
-
-export { Page }
+import React from "react";
+import type { Movie } from "../types";
+import { AdminLayout } from "#app/layouts/AdminLayout";
+export { Page, AdminLayout as Layout };
 
 function Page({ movies }: { movies: Movie[] }) {
   return (
@@ -15,11 +15,12 @@ function Page({ movies }: { movies: Movie[] }) {
         ))}
       </ol>
       <p>
-        Source: <a href="https://star-wars.brillout.com">star-wars.brillout.com</a>.
+        Source:{" "}
+        <a href="https://star-wars.brillout.com">star-wars.brillout.com</a>.
       </p>
       <p>
         Data can be fetched by using the <code>onBeforeRender()</code> hook.
       </p>
     </>
-  )
+  );
 }
