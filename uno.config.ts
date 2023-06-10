@@ -4,8 +4,8 @@ import {
   presetAttributify,
   presetIcons,
   presetUno,
-  transformerCompileClass,
 } from "unocss";
+import transformerCompileClass from "@unocss/transformer-compile-class";
 import transformerAttributifyJsx from "@unocss/transformer-attributify-jsx-babel";
 export default defineConfig({
   transformers: [transformerAttributifyJsx(), transformerCompileClass()],
