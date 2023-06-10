@@ -1,40 +1,42 @@
 {
-  "scripts": {
-    "dev": "npm run server",
-    "prod": "npm run build && npm run server:prod",
-    "build": "vite build",
-    "server": "ts-node ./server/index.ts",
-    "server:prod": "cross-env NODE_ENV=production ts-node ./server/index.ts"
-  },
-  "dependencies": {
-    "@formkit/auto-animate": "1.0.0-beta.6",
-    "@prisma/client": "^4.14.1",
-    "@unocss/reset": "^0.52.0",
-    "compression": "^1.7.4",
-    "cross-env": "^7.0.3",
-    "cross-fetch": "^3.1.6",
-    "express": "^4.18.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-streaming": "^0.3.11",
-    "sirv": "^2.0.3",
-    "vite": "^4.3.8",
-    "vite-plugin-ssr": "^0.4.126"
-  },
-  "type": "module",
-  "devDependencies": {
-    "@babel/preset-typescript": "^7.21.5",
-    "@types/compression": "^1.7.2",
-    "@types/express": "^4.17.17",
-    "@types/node": "^18.16.13",
-    "@types/react": "^18.2.6",
-    "@types/react-dom": "^18.2.4",
-    "@unocss/preset-attributify": "^0.52.0",
-    "@unocss/transformer-attributify-jsx-babel": "^0.52.0",
-    "@vitejs/plugin-react-swc": "^3.3.1",
-    "ts-node": "^10.9.1",
-    "typescript": "^4.9.5",
-    "unocss": "^0.52.0",
-    "vite-plugin-inspect": "^0.7.26"
-  }
+    "scripts": {
+        "dev": "npm run server",
+        "prod": "npm run build && npm run server:prod",
+        "build": "vite build",
+        "server": "ts-node ./server/index.ts",
+        "server:prod": "cross-env NODE_ENV=production ts-node ./server/index.ts",
+        "init:db": "prisma generate"
+    },
+    "dependencies": {
+        "@formkit/auto-animate": "1.0.0-beta.6",
+        "@prisma/client": "^4.15.0",
+        "@unocss/reset": "^0.53.1",
+        "compression": "^1.7.4",
+        "cross-env": "^7.0.3",
+        "cross-fetch": "^3.1.6",
+        "express": "^4.18.2",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-streaming": "^0.3.14",
+        "sirv": "^2.0.3",
+        "vite": "^4.3.9",
+        "vite-plugin-ssr": "^0.4.131"
+    },
+    "type": "module",
+    "devDependencies": {
+        "@babel/preset-typescript": "^7.22.5",
+        "@types/compression": "^1.7.2",
+        "@types/express": "^4.17.17",
+        "@types/node": "^18.16.17",
+        "@types/react": "^18.2.10",
+        "@types/react-dom": "^18.2.4",
+        "@unocss/preset-attributify": "^0.53.1",
+        "@unocss/transformer-attributify-jsx-babel": "^0.53.1",
+        "@vitejs/plugin-react-swc": "^3.3.2",
+        "prisma": "^4.15.0",
+        "ts-node": "^10.9.1",
+        "typescript": "^4.9.5",
+        "unocss": "^0.53.1",
+        "vite-plugin-inspect": "^0.7.28"
+    }
 }
